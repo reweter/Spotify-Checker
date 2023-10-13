@@ -1,0 +1,49 @@
+﻿<Window x:Class="SpotifyChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpotifyChecker"
+        mc:Ignorable="d"
+        Title="Spotify Checker" Height="450" Width="800" ResizeMode="NoResize" FontSize="14" FontWeight="Bold" WindowStyle="None" Background="{x:Null}" AllowsTransparency="True">
+    <Border CornerRadius="30" BorderBrush="Gray" BorderThickness="0.3" MouseLeftButtonDown="DragWindow" Background="#000000">
+        <Grid Margin="10,10,10,10">
+            <Button x:Name="Btn_LoadCombos" Content="Load Logs" HorizontalAlignment="Left" Margin="21,16,0,0" VerticalAlignment="Top" Height="61" Width="172" FontFamily="Segoe UI" FontWeight="Bold" FontSize="14" Click="Btn_LoadCombos_Click"
+                    Background="#FF1ED45D"
+                    Foreground="Black"/>
+
+            <Button x:Name="Btn_LoadProxy" Content="Load Proxy" HorizontalAlignment="Left" Margin="21,82,0,0" VerticalAlignment="Top" Height="67" Width="173" FontFamily="Segoe UI" FontWeight="Bold" FontSize="14" Click="Btn_LoadProxy_Click" Background="#FF1ED45D" Foreground="Black"/>
+            <ComboBox x:Name="Cmb_ProxyType" HorizontalAlignment="Left" Margin="21,154,0,0" VerticalAlignment="Top" Width="173" Foreground="Black" Background="#FF1ED45D">
+                <ComboBoxItem Content="HTTPS" FontWeight="Bold" FontSize="14"/>
+                <ComboBoxItem Content="SOCKS 4" FontWeight="Bold" FontSize="14"/>
+                <ComboBoxItem Content="SOCKS 5" FontWeight="Bold" FontSize="14"/>
+            </ComboBox>
+            <GroupBox x:Name="Gbx_Threads" Header="Threads" Margin="21,186,586,172" FontSize="14" FontWeight="Bold" Foreground="#FF1ED45D">
+                <TextBox x:Name="Txtb_Threads" HorizontalAlignment="Center" TextWrapping="Wrap" Text="50" Width="164" Height="29" TextAlignment="Center" VerticalAlignment="Center" SelectionBrush="#FF1ED45D" Foreground="Black" Background="#FF1ED45D"/>
+            </GroupBox>
+            <Button x:Name="Btn_Start" Content="Start" HorizontalAlignment="Left" Margin="21,338,0,0" VerticalAlignment="Top" Height="67" Width="173" FontFamily="Segoe UI" FontWeight="Bold" FontSize="14" Click="Btn_Start_Click" Background="#FF1ED45D" Foreground="Black"/>
+            <ListView x:Name="Listv_Results" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="209,10,10,106" FontSize="14" FontWeight="Bold" Background="#FF1ED45D">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Content="Total Logs" HorizontalAlignment="Left" Margin="210,337,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D" FontWeight="Normal"/>
+            <Label x:Name="Lbl_TotalCombos" Content="0" HorizontalAlignment="Left" Margin="315,337,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D"/>
+            <Label Content="Total Proxy" HorizontalAlignment="Left" Margin="210,376,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D" FontWeight="Normal"/>
+            <Label x:Name="Lbl_TotalProxy" Content="0" HorizontalAlignment="Left" Margin="315,376,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D"/>
+            <Label Content="Checked" HorizontalAlignment="Left" Margin="395,337,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D" FontWeight="Normal"/>
+            <Label x:Name="Lbl_Checked" Content="0" HorizontalAlignment="Left" Margin="501,337,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D" Background="{x:Null}"/>
+            <Label Content="Errors" HorizontalAlignment="Left" Margin="395,376,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D" FontWeight="Normal"/>
+            <Label x:Name="Lbl_Errors" Content="0" HorizontalAlignment="Left" Margin="501,376,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D"/>
+            <Label Content="Good" HorizontalAlignment="Left" Margin="637,337,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D" FontWeight="Normal"/>
+            <Label x:Name="Lbl_Good" Content="0" HorizontalAlignment="Left" Margin="742,337,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D"/>
+            <Label Content="Bad" HorizontalAlignment="Left" Margin="637,376,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D" FontWeight="Normal"/>
+            <Label x:Name="Lbl_Bad" Content="0" HorizontalAlignment="Left" Margin="742,376,0,0" VerticalAlignment="Top" Foreground="#FF1ED45D"/>
+            <Image x:Name="Img_SpotyLogo" HorizontalAlignment="Left" Height="94" Margin="20,253,0,0" VerticalAlignment="Top" Width="173" Source="/Resources/Logo.jpg" Panel.ZIndex="-1" Stretch="UniformToFill"/>
+            <Label Content="SPOTIFY CHECKER BY REWETER" HorizontalAlignment="Left" Margin="486,410,0,0" VerticalAlignment="Top" Foreground="White" Width="283" Height="25" FontFamily="Micra" FontSize="12"/>
+
+        </Grid>
+    </Border>
+</Window>
