@@ -9,10 +9,10 @@
 - Multithreading support.<br />
 - Without using the API.
 
-## Developers
+## Developers ✅
 
 - [reweter](https://github.com/reweter)
 
-## License
+## License 📄
 
 Distributed under the MIT license
